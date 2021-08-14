@@ -14,10 +14,15 @@ function errorHandler(err){
 }
 
 function clickHandler(){
-    fetch(getFinalURL(txtInput.value))
-    .then(response => response.json())
-    .then(data => outputDiv.innerText = data.contents.translated)
-    .catch(errorHandler)
+    if(txtInput.value != ""){
+        fetch(getFinalURL(txtInput.value))
+        .then(response => response.json())
+        .then(data => outputDiv.innerText = data.contents.translated)
+        .catch(errorHandler)
+    }
+    else {
+        outputDiv.innerText = "Please enter something to translate";
+    }
 }
 
 btnTranslate.addEventListener("click",clickHandler);
