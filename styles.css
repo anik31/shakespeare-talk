@@ -8,6 +8,7 @@
 body{
     font-family: 'Poppins', sans-serif;
     margin: auto;
+    text-align: center;
 }
 img{
     width: 40px;
@@ -17,12 +18,20 @@ img{
     padding: 0.5rem 1rem;
     margin-bottom: 0.5rem;
     text-align: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 .link-primary{
     background-color: var(--focus-text);
-    color: black;
+    color: white;
     border-radius: 0.5rem;
-    display: block;
+    max-width: 200px;
+}
+.link-secondary{
+    color: var(--focus-text);
+    border: 1px solid var(--focus-text);
+    background: transparent;
+    border-radius: 0.5rem;
     max-width: 100px;
 }
 .list-non-bullet{
@@ -33,34 +42,47 @@ img{
     padding: 0rem 0.5rem;
 }
 
-header,footer{
+header{
     background-color: var(--focus-text);
-    padding: 0.1rem;
-    text-align: center;
 }
-footer .link{
-    color: black;
+h1{
+    margin-top: 0;
+    padding: 0.5rem;
 }
 
 button{
     cursor: pointer;
     border: none;
-    margin: 2rem auto;
+    margin: 1rem auto;
+    font-size: 15px;
 }
-textarea{
-    width: 600px;
-    height: 100px;
+#output,textarea{
+    max-width: 600px;
+    max-height: 200px;
+    width: 70%;
+    height: 100%;
     display: block;
     margin: 1rem auto;
-    margin-top: 3rem;
     padding: 1rem;
-    border: 1px var(--focus-text) solid;
+    border: 5px var(--focus-text) solid;
+    border-radius: 2rem;
+    font-size: 20px;
+    text-align: center;
 }
-#output{
-    width: 600px;
-    height: 100px;
-    display: block;
-    margin: 3rem auto;
-    padding: 1rem;
-    border: 1px var(--focus-text) solid;
+.btn,h3{
+    margin: 1rem auto;
+}
+ul{
+    padding-inline-start: 0;
+}
+.fab,.fas{
+    font-size: 30px;
+    color: var(--focus-text);
+    margin: 0 0.5rem;
+}
+footer{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }

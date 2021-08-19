@@ -1,6 +1,7 @@
 var btnTranslate = document.querySelector("#btn-translate");
 var txtInput = document.querySelector("#txt-input");
 var outputDiv = document.querySelector("#output");
+var btnReset = document.querySelector("#btn-reset");
 
 var apiURL = "https://api.funtranslations.com/translate/shakespeare.json";
 
@@ -26,3 +27,7 @@ function clickHandler(){
 }
 
 btnTranslate.addEventListener("click",clickHandler);
+btnReset.addEventListener("click",()=>{
+    outputDiv.innerText = "";
+    txtInput.value = "";
+})
